@@ -11,11 +11,14 @@ class Person {
   String get getName => name;
   int get getAge => age;
 
+  void details () {
+    print("Name: ${this.getName}");
+    print("Age: ${this.getAge}");
+  }
 }
 
 
 void main () {
   Person person1 = Person('Emmanuel Torres Malena', 21);
-  print(person1.getName);
-  print(person1.getAge);
+  person1.details();
 }
