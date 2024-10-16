@@ -1,4 +1,4 @@
-# Part 1 - Class, Enums and Mixins
+# Part 1 - Class, Enums, Mixins...
 ---
 
 ### [Exercise 1](./ex_1.dart)
