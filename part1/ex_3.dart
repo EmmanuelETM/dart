@@ -14,10 +14,11 @@ class Dog extends Animal {
   String? name;
   String? breed;
 
-  Dog(super.species, super.age, this.name, this.breed)
-      : assert(age != null && age > 0, 'Age must be greater than 0') {
+  Dog(super.species, super.age, this.name, this.breed){
+    assert(age! > 0, 'Age must be greater than 0');
     print("gud boi created");
   }
+
 
   @override
   void eat() {
@@ -26,11 +27,8 @@ class Dog extends Animal {
 }
 
 void main () {
-  // This dog is created successfully
+
   Dog lilDog = Dog('canis lupus', 1, 'clifford', 'chihuahua');
   lilDog.eat();
-
-  // This will throw an AssertionError because age is 0
-  Dog notSoDog = Dog('canis lupus', 0, 'clifford', 'a dud');  // Throws: Age must be greater than 0
-
+  Dog notSoDog = Dog('canis lupus', 0, 'clifford', 'a dud');
 }
